@@ -8,7 +8,7 @@ public class TafelService {
         System.out.println("3 * 10 = 30");*/
 
       for (int i = 1; i <= 10; i++){
-          System.out.println("1 * 10 = " + i*10);
+          System.out.println(i + " * 10 = " + i*10);
       }
 
     }
