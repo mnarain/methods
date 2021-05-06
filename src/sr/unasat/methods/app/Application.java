@@ -1,5 +1,6 @@
 package sr.unasat.methods.app;
 
+import sr.unasat.methods.services.ATMService;
 import sr.unasat.methods.services.ExampleService;
 import sr.unasat.methods.services.TafelService;
 
@@ -9,8 +10,8 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) {
-        TafelService ts = new TafelService();
-        ts.tafelVanTien();
+/*        TafelService ts = new TafelService();
+        ts.tafelVanTien();*/
 /*        ExampleService exampleService = new ExampleService();
         exampleService.example();
         exampleService.example("This is my custom message");
@@ -25,6 +26,10 @@ public class Application {
         System.out.println(numbers.size());
         numbers.add(100);*/
 
+        ATMService atmService = new ATMService();
+        atmService.fastCash(400);
+
     }
 
 }
+
