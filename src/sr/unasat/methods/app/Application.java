@@ -27,8 +27,14 @@ public class Application {
         numbers.add(100);*/
 
         ATMService atmService = new ATMService();
-        atmService.fastCash(400);
 
+        //else if aanroeping
+        int opnameBedragIf = 400;
+        atmService.fastCash(opnameBedragIf);
+
+        //switch aanroeping
+        Integer opnameBedragSwitch = 400;
+        atmService.fastCash(opnameBedragSwitch);
     }
 
 }
