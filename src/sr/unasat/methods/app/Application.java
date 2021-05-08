@@ -10,8 +10,13 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) {
-/*        TafelService ts = new TafelService();
-        ts.tafelVanTien();*/
+        TafelService ts = new TafelService();
+        ts.tafelVanTien();
+        ts.tafelVan(20);
+        ts.tafelVan(4,7,17);
+
+
+
 /*        ExampleService exampleService = new ExampleService();
         exampleService.example();
         exampleService.example("This is my custom message");
@@ -26,15 +31,15 @@ public class Application {
         System.out.println(numbers.size());
         numbers.add(100);*/
 
-        ATMService atmService = new ATMService();
+      /*  ATMService atmService = new ATMService();*/
 
         //else if aanroeping
-        int opnameBedragIf = 400;
-        atmService.fastCash(opnameBedragIf);
+ /*       int opnameBedragIf = 400;
+        atmService.fastCash(opnameBedragIf);*/
 
         //switch aanroeping
-        Integer opnameBedragSwitch = 400;
-        atmService.fastCash(opnameBedragSwitch);
+  /*      Integer opnameBedragSwitch = 400;
+        atmService.fastCash(opnameBedragSwitch);*/
     }
 
 }
