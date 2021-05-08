@@ -2,6 +2,7 @@ package sr.unasat.methods.app;
 
 import sr.unasat.methods.services.ATMService;
 import sr.unasat.methods.services.ExampleService;
+import sr.unasat.methods.services.ProgrammerService;
 import sr.unasat.methods.services.TafelService;
 
 import java.util.ArrayList;
@@ -10,10 +11,22 @@ import java.util.List;
 public class Application {
 
     public static void main(String[] args) {
-        TafelService ts = new TafelService();
+/*        TafelService ts = new TafelService();
         ts.tafelVanTien();
         ts.tafelVan(20);
-        ts.tafelVan(4,7,17);
+        ts.tafelVan(4,7,17);*/
+
+        ProgrammerService ps = new ProgrammerService();
+        String[] programmers = {"Paul", "Shreya", "Selvan", "Tom"};
+        ps.findProgrammer(programmers, "Henk");
+        ps.findProgrammerIncludingNotFoundMessage(programmers, "Tom");
+        ps.findProgrammerIncludingNotFoundMessage(programmers, "Henk");
+
+        String[] programmers2ndList = {"Gregory", "Geert", "Hans", "Ann"};
+        ps.findProgrammer(programmers2ndList, "Paul");
+
+        ps.listProgrammersExceptFor(programmers, "Paul");
+        ps.listProgrammersExceptFor(programmers2ndList, "Paul");
 
 
 
@@ -41,6 +54,8 @@ public class Application {
   /*      Integer opnameBedragSwitch = 400;
         atmService.fastCash(opnameBedragSwitch);*/
     }
+
+
 
 }
 
