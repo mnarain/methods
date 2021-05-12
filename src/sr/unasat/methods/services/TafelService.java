@@ -1,5 +1,8 @@
 package sr.unasat.methods.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TafelService {
 
     //opdracht 1
@@ -38,4 +41,39 @@ public class TafelService {
             System.out.println(multiplier + " * " + tafel + " = " + multiplier * tafel);
         }
     }
+
+
+    //opdracht 3
+    public void tafelVanWhile(int start, int eind, int tafel) {
+        System.out.println("********* Dit is tafel van " + tafel + " *********");
+
+        int multiplier = start;
+        while (multiplier <= eind) {
+            System.out.println(multiplier + " * " + tafel + " = " + (multiplier * tafel));
+            multiplier++;
+        }
+    }
+
+    public void tafelVanDoWhile(int start, int eind, int tafel) {
+        System.out.println("********* Dit is tafel van " + tafel + " *********");
+
+        int multiplier = start;
+        do {
+            System.out.println(multiplier + " * " + tafel + " = " + (multiplier * tafel));
+            multiplier++;
+        } while (multiplier <= eind);
+    }
+
+    public void tafelVanForEach(int start, int eind, int tafel) {
+        System.out.println("********* Dit is tafel van " + tafel + " *********");
+        List<Integer> multiplyValues = new ArrayList<>();
+        for (int multiplier = start; multiplier <= eind; multiplier++) {
+            multiplyValues.add(multiplier);
+        }
+
+        for (Integer multiplier : multiplyValues) {
+            System.out.println(multiplier + " * " + tafel + " = " + (multiplier * tafel));
+        }
+    }
+
 }
